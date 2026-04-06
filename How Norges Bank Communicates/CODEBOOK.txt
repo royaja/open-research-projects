@@ -1,0 +1,96 @@
+Codebook
+
+Project
+
+Communication on interest rates from Norges Bank
+
+Corpus boundary
+
+The material was collected on 2026-04-04 from the English-language Norges Bank website.
+
+The public release covers:
+40 speeches
+40 press releases
+80 documents in total
+
+The project treats the paragraph as the unit of analysis. The public paragraph-level file contains one row per coded paragraph retained after scraping and cleaning.
+
+This is a bounded descriptive corpus. It is not a full archive of all Norges Bank communication, and it does not include media coverage or responses from other actors.
+
+Data note
+
+The full text on the website is owned by Norges Bank and is therefore not included in the uploaded dataset.
+
+The public release contains only:
+coded variables
+publication dates and times
+source type
+source URLs
+paragraph and document identifiers
+simple derived metadata
+
+The public release does not redistribute the full paragraph text or full document text from the website.
+
+Coding approach
+
+The project uses manual content analysis. Paragraphs were extracted from the selected webpages, cleaned, and then coded for one primary communicative function and one primary substantive topic.
+
+This follows standard content-analysis practice in which the unit of analysis, category system, and coding dimensions are stated explicitly.
+
+Data files
+
+data/coded_paragraphs.csv
+Paragraph-level public data file.
+
+Variables in coded_paragraphs.csv
+primary_function_no: Norwegian label for the paragraph's primary communicative function.
+primary_function_en: English label for the paragraph's primary communicative function.
+primary_topic_no: Norwegian label for the paragraph's primary substantive topic.
+primary_topic_en: English label for the paragraph's primary substantive topic.
+category: Document type. Values: Press release or Speech.
+url: Source URL on Norges Bank's website.
+title: Scraped page title.
+published_date: Publication date for the source page.
+published_time: Publication time where available on the source page.
+paragraph_type: Scraped HTML node type, usually p, li, or blockquote.
+paragraph_id: Paragraph number within document after scraping and ordering.
+paragraph_nwords: Word count for the cleaned paragraph.
+doc_id: Document identifier derived from the URL.
+paragraph_uid: Unique paragraph identifier derived from doc_id and paragraph_id.
+year: Year derived from published_date.
+month: Month derived from published_date.
+
+data/document_inventory.csv
+Document-level inventory with one row per speech or press release.
+
+Variables in document_inventory.csv
+doc_id: Document identifier derived from the URL.
+category: Document type. Values: Press release or Speech.
+url: Source URL on Norges Bank's website.
+title: Scraped page title.
+published_date: Publication date for the source page.
+year: Year derived from published_date.
+month: Month derived from published_date.
+n_paragraphs: Number of cleaned paragraphs retained for the document.
+
+Coding dimensions
+
+Primary communicative function
+Economic assessment / diagnosis: Describes or assesses current economic conditions, trends, or indicators.
+Policy explanation / justification: Explains, defends, or justifies a policy decision, policy stance, or institutional action.
+Outlook / forward guidance: Refers to future expectations, likely developments, or prospective policy orientation.
+Risk / uncertainty: Highlights uncertainty, vulnerabilities, or downside and upside risks.
+Institutional accountability / mandate: Explains Norges Bank's mandate, role, responsibility, or decision procedure.
+Other / administrative / not codable: Administrative text, headings, ancillary information, or non-substantive material.
+
+Primary topic
+Inflation and prices: Inflation, prices, cost pressures, or related price developments.
+Interest rates and monetary stance: Policy rates, interest-rate setting, monetary stance, or rate-path reasoning.
+Economic activity and labor market: Growth, output, demand, employment, wages, or labor market developments.
+Exchange rate and external conditions: Exchange rate developments, international conditions, imported conditions, or external shocks.
+Financial stability and banking: Banking, credit conditions, financial vulnerabilities, or financial stability issues.
+Other / administrative / not codable: Administrative text, headings, ancillary information, or non-substantive material.
+
+Analytic note
+
+The public paragraph-level file retains the coded corpus, including rows coded as Other / administrative / not codable. The figures use a filtered analytic sample that excludes rows with missing values on the plotted variables and rows coded as Other / administrative / not codable.
