@@ -1,0 +1,24 @@
+RESULTS
+
+Main findings
+The analysis examines 47 Facebook posts published by Lars Løkke Rasmussen in the final three weeks before the 2026 Danish election.
+
+Figure 1: number of posts by story type
+The most frequently used story type was "Midten som ansvar og balanse" with 17 posts.
+This was followed by:
+- Posts trying to gather support, labelled "Samling mot splittelse": 13 posts
+- Posts containing a personal angle, focusing on Rasmussen himself, which was laballed "Den personlige": 11 posts
+- Posts that directly mentiones the election, labelled "Valgkamplogistikk eller annet": 6 posts
+
+Figure 2: overperformance by story type
+Overperformance is measured as the difference between a story type's share of total engagement and its share of all posts.
+The clearest pattern is that the personal story type generated more engagement than its publication volume would suggest.
+- Posts containing a personal angle, focusing on Rasmussen himself, which was laballed "Den personlige": +2.5 percentage points
+- Posts that directly mentiones the election, labelled "Valgkamplogistikk eller annet": +1.9 percentage points
+- Posts that frames the political center as responsoible and blanaced politic, labelled"Midten som ansvar og balanse": -0.7 percentage points
+- Posts trying to gather support, labelled "Samling mot splittelse": -3.7 percentage points
+
+Substantive interpretation
+The campaign was published most heavily through a center-oriented and responsibility-focused style, but the more personal posts generated relatively stronger engagement.
+
+This suggests that what Rasmussen published most often was not the same as what generated the strongest response.

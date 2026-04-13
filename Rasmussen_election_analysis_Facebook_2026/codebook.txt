@@ -1,0 +1,45 @@
+CODEBOOK
+
+Dataset overview
+The original dataset consists of 47 Facebook posts published on Lars Løkke Rasmussen's Facebook page in the final three weeks before the Danish election, from 3 March to 24 March 2026.
+
+Why the dataset is not included
+The full dataset is withheld because it contains Facebook-derived posts. To reduce redistribution risk, neither full post text nor a public data extract is included here.
+
+Core dataset elements in the private working file
+- post number
+- page name
+- political party
+- publication date
+- engagement variables:
+  - likes
+  - sad
+  - care
+  - love
+  - haha
+  - wow
+  - angry
+  - comments
+  - shares
+- visual indicator
+- coded strategy variables:
+  - gpt_strategy
+  - hovedstrategi
+  - strategy_label
+
+Analytical units
+One row equals one Facebook post.
+
+Derived measures used in the analysis
+- reactions_total: sum of reaction counts
+- engagement_total: reactions_total + comments + shares
+- number of posts by story type
+- overperformance by story type, defined as the difference between a story type's share of total engagement and share of all posts
+
+Story types used in the analysis
+- Midten som ansvar og balanse
+- Samling mot splittelse
+- Den personlige
+- Valgkamplogistikk eller annet
+
+

@@ -1,0 +1,16 @@
+DATASET_ACCESS
+
+No public dataset file is included in this package.
+
+Reason
+The source material comes from Facebook posts. To avoid redistributing Facebook posts, I exclude the underlying dataset.
+
+What is documented instead
+- Scope of the dataset
+- variables used in the analysis
+- workflow
+- figures
+- short summary of results
+
+Private working dataset
+The private working file used in the analysis contains 47 posts from 3 March to 24 March 2026 with engagement counts and coded story types.
