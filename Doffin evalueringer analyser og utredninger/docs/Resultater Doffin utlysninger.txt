@@ -1,0 +1,14 @@
+Resultater relatert til Doffin-utlysninger
+Dato: 19.04.2026
+
+Denne analysen ser på utlysninger hentet fra Doffin ved hjelp av søkeordene evaluering, analyse og utredning.
+
+Figur 1: Figur 1 viser hvordan antallet relevante utlysninger utvikler seg over tid i det tilgjengelige materialet. Figuren gir et enkelt oversiktsbilde av aktivitetsnivået fra måned til måned i perioden april 2024 til mai 2025. Materialet tyder på at antallet utlysninger varierer gjennom perioden, med tydelige topper og fall underveis.
+
+Figur 2: Figur 2 viser hvordan utlysningene fordeler seg etter type begrep. Analyse er klart den vanligste kategorien, med 766 utlysninger. Evaluering kommer som nummer to med 151 utlysninger. Kombinasjonen evaluering + analyse forekommer 87 ganger, mens analyse + utredning forekommer 76 ganger. Utredning alene forekommer 74 ganger. Evaluering + utredning er den minste kategorien, med 11 utlysninger. Figuren tyder på at de fleste utlysningene bruker ett hovedbegrep, og at analyse dominerer materialet.
+
+Figur 3: Figur 3 viser hvilke brede politikkområder utlysningene ser ut til å samle seg innenfor. Arbeid og velferd er den største kategorien med 479 utlysninger, etterfulgt av helse med 264 og utdanning med 139. Deretter følger annet, utenriks utvikling og innovasjon. Klima og energi, justis og beredskap, og kultur er de minste kategoriene i materialet. Figuren gir et deskriptivt bilde av hvilke saksfelt som dominerer i materialet.
+
+Figur 4: Figur 4 viser metoder som nevnes i utlysningstekstene. Kvantitativ og kvalitativ metode er de vanligste metodereferansene, etterfulgt av intervju og survey. Registerdata nevnes sjeldnere. Figuren viser at noen utlysninger inneholder tydelige metodiske føringer, men også at eksplisitte metodekrav bare nevnes i en mindre del av materialet.
+
+Til sammen gir figurene et oversiktsbilde av hvordan evalueringsrelaterte oppdrag blir lyst ut på Doffin. Analysen viser både utvikling over tid, fordeling av oppdragstyper, hvilke politikkområder som dominerer, og hvordan oppdragene beskrives metodisk.

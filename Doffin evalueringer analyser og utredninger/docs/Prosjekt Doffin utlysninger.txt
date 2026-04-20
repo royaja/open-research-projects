@@ -1,0 +1,31 @@
+Doffin-utlysninger: evaluering, analyse og utredning
+
+Dette prosjektet kartlegger kunngjorte oppdrag på Doffin som handler om evaluering, analyse og utredning. Analysen gjelder kunngjøringer, ikke kontrakter eller endelige tildelinger.
+
+Prosjektspørsmål
+
+Hovedspørsmål
+Hva kjennetegner evalueringsrelaterte utlysninger på Doffin i den tilgjengelige perioden fra april 2024 til mai 2025?
+
+Delspørsmål
+1. Hvordan utvikler antallet relevante utlysninger seg over tid?
+2. Hvilke begreper dominerer i utlysningene?
+3. Hvilke politikkområder går oftest igjen?
+4. Hvor ofte nevnes konkrete metodekrav i utlysningstekstene?
+
+Arbeidsflyt
+1. Samle inn kunngjøringer fra Doffin
+2. Rense materialet og bygge et analyseklar datasett
+3. Kode oppdragstyper, politikkområder og metodeomtaler
+4. Lage figurer og korte notater
+5. Arkivere prosjektet på GitHub og Zenodo
+
+Data
+Data deles ikke i dette repoet. Prosjektmappen inneholder derfor ikke rådata eller bearbeidede datafiler. Repoet dokumenterer i stedet hvordan materialet ble samlet inn, renset og analysert.
+
+Figurer
+Prosjektet bygger på fire figurer:
+1. Utlysninger over tid
+2. Fordeling av oppdragstyper
+3. Fordeling av politikkområder
+4. Metoder som nevnes i utlysningene

@@ -1,0 +1,6 @@
+Datanote
+Dato: 19.04.2026
+
+Datagrunnlaget i dette prosjektet bygger på offentlig tilgjengelige kunngjøringer fra Doffin. Selve datafilene deles ikke i prosjektmappen. Repoet inneholder i stedet kode, figurer og tekstfiler som dokumenterer hvordan materialet ble samlet inn, renset og analysert.
+
+Analysen bygger på det tilgjengelige materialet som dekker perioden april 2024 til mai 2025. Prosjektet gjelder kunngjøringer publisert på Doffin, ikke kontrakter eller endelige tildelinger.

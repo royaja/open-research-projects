@@ -1,0 +1,12 @@
+Metodenotat
+Dato: 19.04.2026
+
+Analysen bygger på kunngjøringer hentet fra Doffin, den nasjonale databasen for offentlige anskaffelser i Norge. Prosjektet ser på kunngjorte oppdrag som handler om evaluering, analyse eller utredning. Enheten i analysen er kunngjøringen, ikke kontrakten eller den endelige tildelingen.
+
+Materialet ble samlet inn gjennom systematiske søk i Doffin og deretter renset for dubletter og åpenbart irrelevante treff. I den praktiske innsamlingen ble det brukt søkeord som evaluering, følgeevaluering, analyse og utredning. Hver kunngjøring ble koblet til ett datapunkt i datasettet.
+
+Det foreliggende materialet dekker kunngjøringer fra april 2024 til mai 2025. Det foreliggende materialet dekker kunngjøringer fra april 2024 til mai 2025. Etter innsamlingen ble materialet kodet med opplysninger om blant annet kunngjøringsdato, oppdragsgiver, oppdragstype, policyfelt og metodiske krav. Oppdragstype ble brukt til å skille mellom rene evalueringer og hybride oppdrag som kombinerer evaluering med analyse eller utredning.
+
+Etter innsamlingen ble materialet kodet med opplysninger om blant annet kunngjøringsdato, oppdragsgiver, oppdragstype, policyfelt og metodiske krav. Oppdragstype ble brukt til å skille mellom rene evalueringer og hybride oppdrag som kombinerer evaluering med analyse eller utredning. Metodiske krav ble identifisert gjennom ord som intervju, survey, registerdata, dokumentanalyse, kvantitativ og kvalitativ.
+
+Analysen er deskriptiv. Målet er ikke å si noe om hele markedet for evalueringstjenester i offentlig sektor, men å gi et oversiktsbilde av evalueringsrelaterte oppdrag som er kunngjort på Doffin. Resultatene må derfor tolkes som en kartlegging av kunngjorte oppdrag, ikke som en fullstendig oversikt over alle gjennomførte kjøp.
