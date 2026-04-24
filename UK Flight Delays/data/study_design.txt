@@ -1,0 +1,83 @@
+Study design note
+UK airport delay patterns, 2023 to 2025
+------------------------------------------------------------
+
+Research question
+
+Which UK airports experienced the longest delays and highest cancellation rates in 2025, and to what extent do airport-level differences in punctuality persist after accounting for variation in airline mix, route type and flight volume?
+
+A secondary question concerns change over time. Between 2023 and 2025, did the airports that performed worst at the start of that window show the most improvement, or did the ranking stay roughly stable?
+
+------------------------------------------------------------
+Motivation
+
+After the disruption that followed the return of post-pandemic travel demand, there was a lot of public commentary about which airports were hardest hit and which had recovered. The CAA punctuality data makes it possible to look at this systematically across airports and over time, without relying on anecdote or media coverage. A simple exploratory analysis seemed like a useful way to get a clearer picture.
+
+------------------------------------------------------------
+Design type
+
+This is a descriptive and exploratory study. It does not use a randomised or quasi-experimental design. The regression model is included not to establish causal effects but to check whether the descriptive patterns are robust to compositional differences across airports.
+
+Readers should interpret the findings accordingly. Finding that Manchester has a higher average delay than Heathrow after adjusting for airline and route type tells us something real about Manchester as an airport, but it does not tell us why that is the case or what would happen if you changed something about how Manchester operates.
+
+------------------------------------------------------------
+Unit of analysis
+
+The primary unit of analysis for the descriptive work is the airport-year combination. The regression operates at the route-airline-airport level within 2025.
+
+------------------------------------------------------------
+Sample
+
+The working sample covers scheduled flights only. Charter operations follow a different commercial logic and route structure, and including them would complicate airport-level comparisons.
+
+For airport-level summaries I require at least 5,000 matched flights per airport per year. This excludes very small airports where a handful of disrupted routes could generate extreme average figures.
+
+For the airport-airline analysis the minimum is 300 matched flights per combination.
+
+For the route-level regression the minimum is 20 matched flights per route-airline cell. This is the threshold at which the CAA considers the data reliable enough to report.
+
+------------------------------------------------------------
+Outcome variables
+
+Average delay in minutes, weighted by matched flights. This is the primary outcome throughout.
+
+Cancellation rate (percentage of scheduled flights cancelled), used in the descriptive airport comparison and as a predictor in the regression.
+
+------------------------------------------------------------
+Covariates in the regression model
+
+Airport fixed effects. A dummy for each reporting airport, with one airport dropped as the reference category.
+
+Airline fixed effects. A dummy for each airline, again with one dropped as reference.
+
+Log of matched flights. Log-transformed to reduce the influence of very large route-airline combinations. This captures the idea that busier routes may have different delay profiles due to turnaround pressure or slot constraints.
+
+Cancellation rate on that route-airline combination. Routes with higher cancellations may have systematically different delay patterns.
+
+International route indicator. A binary variable equal to 1 when the origin or destination country is not the United Kingdom. Long-haul international routes face different constraints than domestic or short-haul European routes.
+
+------------------------------------------------------------
+Analytical approach
+
+Step 1. Load and clean three years of CAA punctuality data. Standardise string formatting, convert numeric columns, derive summary variables, and check for duplicates and implausible totals.
+
+Step 2. Aggregate to airport level using weighted means. Produce ranked summaries for delays, cancellations and change over time.
+
+Step 3. Aggregate to airport-airline level and identify the worst-performing combinations in 2025.
+
+Step 4. Compute the 2023-to-2025 change in average delay for airports with sufficient coverage in both years.
+
+Step 5. Estimate the OLS regression on 2025 route-level data. Extract airport coefficients and compare them to the raw descriptive rankings.
+
+Step 6. Visualise all results as horizontal bar charts or scatter plots using ggplot2, with a consistent colour scheme and minimal theme.
+
+------------------------------------------------------------
+Limitations
+
+No causal identification. The regression absorbs airline and route composition but cannot account for unobservable airport characteristics, local weather patterns, or air traffic control decisions.
+
+Data is aggregated. The CAA statistics are already summarised at the route-airline level. We cannot observe individual flight delays, which means we cannot model the distribution of delays or identify specific peak periods.
+
+Two-year comparison only. Tracking only 2023 and 2025 misses any within-period variation. An airport that got worse in 2024 and then improved in 2025 would look like it improved overall.
+
+Matched-flight bias. Unmatched flights are excluded from delay calculations by the CAA methodology. If unmatched flights are systematically associated with longer delays, the reported averages may understate the true delay burden.

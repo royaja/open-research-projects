@@ -1,0 +1,95 @@
+Research log
+UK airport delay patterns, 2023 to 2025
+Last updated: April 2026
+
+------------------------------------------------------------
+Background and motivation
+------------------------------------------------------------
+
+This project started out of curiosity about whether the wave of travel disruption that hit UK airports after 2021 had actually improved by 2025, and whether some airports were consistently worse than others even after you accounted for the kinds of airlines and routes they serve. The CAA publishes annual punctuality statistics at a detailed level, which makes it a good candidate for a small exploratory analysis.
+
+------------------------------------------------------------
+Data acquisition
+------------------------------------------------------------
+
+The data comes from the UK Civil Aviation Authority. They publish annual punctuality statistics as CSV files on their website. I downloaded three files covering 2023, 2024 and 2025. Each file covers the full reporting year and includes route-level data broken down by airport, airline, origin and destination, and flight type (scheduled vs charter).
+
+I stored all three files in a local project folder and loaded them into R using a map_dfr() call so the year could be tracked through a source_file variable.
+
+------------------------------------------------------------
+Wrangling decisions
+------------------------------------------------------------
+
+The raw data needed a few things before it was usable.
+
+First, string formatting was inconsistent across fields. Airport names, airline names, and country names all had mixed casing and leading or trailing whitespace. I used str_squish and str_to_title to standardise them.
+
+Second, the scheduled/charter indicator was coded as "S" and "C" in the raw files. I recoded these to full words to make the tables easier to read.
+
+Third, all the percentage and delay columns came in as character type due to the CSV parsing. I converted everything to numeric using across().
+
+I also derived two summary variables that I used throughout the analysis. pct_on_time_15 captures the share of flights that arrived between 1 minute early and 15 minutes late. pct_late_over_15 captures all flights that arrived more than 15 minutes late. These two together cover all scheduled outcomes except unmatched and cancelled flights.
+
+As a sanity check I confirmed that the percentage columns sum close to 100 for each row, and checked for duplicated route-airport-airline-year combinations. Neither check turned up any problems worth investigating further.
+
+------------------------------------------------------------
+Sample restrictions
+------------------------------------------------------------
+
+I filtered to scheduled flights only. Charter flights operate on a different logic and mixing them in would complicate the airport-level summaries.
+
+I also dropped route-airline combinations with fewer than 20 matched flights when working at the route level, and fewer than 5,000 matched flights when comparing airports against each other. Small samples can produce very extreme average delay figures that would distort any ranking.
+
+------------------------------------------------------------
+Aggregation
+------------------------------------------------------------
+
+Most of the descriptive analysis works at the airport level. I aggregated from the route-airline level using weighted.mean(), with the number of matched flights as the weight. This means that a busy Heathrow-Frankfurt route counts for more than a thin regional connection, which seems right.
+
+For the airport-airline analysis I kept the grouping one level lower and used a 300-flight minimum instead.
+
+------------------------------------------------------------
+Change analysis
+------------------------------------------------------------
+
+To compare 2023 and 2025 I joined the two years on airport name using pivot_wider() and computed a simple difference. I limited this to airports with at least 5,000 matched flights in both years to avoid having a small-sample airport drive the ranking.
+
+------------------------------------------------------------
+Regression model
+------------------------------------------------------------
+
+The model is a straightforward OLS regression. The outcome is average delay in minutes at the route-airline-airport level for 2025. The predictors are airport fixed effects, airline fixed effects, the log of matched flights (to capture volume effects without being dominated by outliers), the percentage of flights cancelled on that route, and a binary indicator for whether the route is international.
+
+The goal was not causal inference. It was to check whether the airport-level patterns visible in the descriptive plots hold up after absorbing some of the obvious confounders. The R-squared is reasonable for this type of data, and the residual plot suggests the model is doing a decent job across most of the distribution, though it struggles with the most extreme outliers at the top end.
+
+Airport effects for Manchester and Birmingham remain large and statistically significant after adjustment, which suggests those airports have something going on beyond just their airline or route mix.
+
+------------------------------------------------------------
+Visualisation
+------------------------------------------------------------
+
+All figures were produced in R using ggplot2. I used a consistent colour palette across figures: a muted steel blue for delays, sage green for cancellations, a warm terracotta for airline-level data, and a darker green for improvement figures. The theme is minimal with light vertical grid lines and no horizontal gridlines. All bar charts are sorted by value and flipped horizontally to make the airport names readable.
+
+Figures were saved at 300 dpi using ggsave().
+
+------------------------------------------------------------
+File structure
+------------------------------------------------------------
+
+The project is organised into three R scripts:
+
+01_load_and_clean.R handles data loading, variable creation, and quality checks.
+02_aggregate.R produces all the summary tables used in the plots.
+03_analyse_and_plot.R runs the regression and generates all seven figures.
+
+This separation makes it easier to re-run just the figures without reloading the data, and to inspect the intermediate tables before plotting.
+
+------------------------------------------------------------
+Known limitations
+------------------------------------------------------------
+
+The data does not include information about why a flight was delayed or cancelled. Route-level average delay includes all delay causes and there is no way to separate air traffic control, technical faults, weather, or turnaround issues from the CAA statistics alone.
+
+The change analysis covers only 2023 and 2025 and skips 2024. This was a deliberate choice to focus on the endpoints of the period rather than year-on-year noise, but it means the trajectory is not visible.
+
+The regression model treats the route-airline-airport observations as independent. In reality, delays on one route at an airport probably correlate with delays on others through shared infrastructure. A more careful model would account for this clustering.

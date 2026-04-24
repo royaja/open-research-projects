@@ -1,0 +1,63 @@
+Data note
+UK Civil Aviation Authority, Annual Punctuality Statistics
+------------------------------------------------------------
+
+Source
+
+The data used in this project comes from the UK Civil Aviation Authority (CAA). The CAA is the independent aviation regulator for the United Kingdom and publishes annual punctuality statistics as part of its wider aviation data programme. The statistics cover scheduled and charter commercial flights operating through UK airports.
+
+The files used here are the full-year annual releases for 2023, 2024 and 2025.
+
+Where to find the data
+
+The files are publicly available on the CAA website under the aviation data section. The direct landing page for punctuality statistics is at
+
+https://www.caa.co.uk/data-and-analysis/uk-aviation-market/flight-punctuality/
+
+Each year's data is released as a CSV file with a standardised naming convention. The files used here follow the pattern YYYY_Annual_Punctuality_Statistics_Full_Analysis.csv.
+
+What the data contains
+
+Each row in the raw files represents one airport-airline-route-flight_type combination for the reporting year. The key variables are listed below.
+
+reporting_period
+    The year the statistics cover.
+
+reporting_airport
+    The UK airport where the flight was departing or arriving. The data is from the UK airport's perspective.
+
+airline_name
+    The name of the operating airline.
+
+origin_destination and origin_destination_country
+    The non-UK end of the route, at city and country level.
+
+scheduled_charter
+    Whether the service is scheduled (S) or charter (C).
+
+number_flights_matched
+    The number of flights that could be matched between scheduled and actual departure records. This is the base for all percentage calculations.
+
+average_delay_mins
+    The average delay in minutes across all matched flights on that route-airline combination.
+
+flights_cancelled_percent
+    The share of flights that were cancelled outright.
+
+A series of percentage columns breaking down departure punctuality into brackets ranging from more than 15 minutes early to more than 360 minutes late.
+
+Coverage and known gaps
+
+The data covers the major UK airports and a large number of smaller ones. Not all routes are covered in every year. Some airport-airline-route combinations appear in one year but not another, either because a route was started or discontinued, or because the combination fell below the minimum reporting threshold.
+
+The CAA methodology note (available alongside the data download) explains how flights are matched between scheduled and actual records. Unmatched flights are reported separately and excluded from the delay and punctuality percentages.
+
+How the data was used in this project
+
+I loaded all three annual files together using a looping function in R and added a source_file column to track which year each row came from. I then cleaned string formatting, converted numeric columns, and derived a small number of summary variables before aggregating to airport and airport-airline level.
+
+The full cleaning and wrangling steps are documented in the research log and in the script 01_load_and_clean.R.
+
+Citation
+
+UK Civil Aviation Authority. Annual Punctuality Statistics, 2023-2025. Available at https://www.caa.co.uk/data-and-analysis/uk-aviation-market/flight-punctuality/
