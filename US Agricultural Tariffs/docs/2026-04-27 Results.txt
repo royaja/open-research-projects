@@ -1,0 +1,12 @@
+Results
+27.04.2026
+
+A total of three descriptive analyses were performed to look into the main question: How much do selected US trade agreements reduce comparable agricultural tariff rates relative to MFN rates, and where are these reductions concentrated?
+
+Figure 1 shows that the highest comparable tariff rates are concentrated under MFN rates. The highest average rates appear in chapters such as dairy, eggs and honey; cereal preparations; vegetables; miscellaneous edible preparations; and fruit and vegetable preparations. In the selected trade agreement columns, most chapters fall to 0% or close to 0%, although a few exceptions remain visible.
+
+Figure 2 shows the average tariff discount by product chapter. The largest reductions are found in the same chapters where MFN rates are highest. Dairy, eggs and honey has the largest average discount, followed by cereal preparations and vegetables. This suggests that trade agreements matter most in the parts of the agricultural schedule where ordinary MFN rates still create visible tariff protection.
+
+Figure 3 compares the selected trade agreements by their average reduction from matched MFN rates. The discounts are remarkably similar across all six agreements, ranging from 7.9 percentage points (Australia) to 8.6 percentage points (USMCA). This narrow spread is itself the finding. Despite being negotiated with different partners over three decades, US trade agreements appear to converge on a near uniform pattern of liberalisation for ad valorem comparable agricultural lines. 
+
+Together, these three figures provide a small policy-oriented view of US agricultural tariffs. The main takeaway is that selected trade agreements reduce many comparable agricultural tariffs to zero or near zero, but the size of the discount depends on the product chapter. The analysis is descriptive and should be read with the main methodological limitation in mind: it includes ad valorem and duty-free lines only, while specific, compound and derived duties are excluded.

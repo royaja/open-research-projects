@@ -1,0 +1,24 @@
+Research note
+27.04.2026
+
+This project uses the TidyTuesday Week 17 dataset on US Agricultural Tariffs. The data comes from the USITC Tariff Database and covers tariff rates for products imported into the United States from 1997 to 2025. I found the dataset interesting because it has a clear policy angle: tariff rates are not only technical numbers, but also reflect how market access differs across trade agreements and product groups.
+
+The overarching question for the project is:
+
+How much do selected US trade agreements reduce comparable agricultural tariff rates relative to MFN rates, and where are these reductions concentrated?
+
+The project looks at three smaller questions:
+
+RQ1: How do comparable tariff rates vary across agricultural product chapters and selected trade agreements?
+
+RQ2: Which agricultural chapters receive the largest average tariff discount compared with MFN rates?
+
+RQ3: Which selected trade agreements offer the largest average reduction from matched MFN rates?
+
+The analysis is descriptive rather than causal. I do not try to explain why a specific product group received a lower or higher tariff rate. Instead, the aim is to make the structure of the tariff data easier to see.
+
+The unit of analysis starts at the HTS8 tariff line level. For the visualizations, the data is aggregated to HTS chapters, which gives broader product groups such as dairy, vegetables, sugars and beverages. This makes the figures easier to read than plotting every individual tariff line.
+
+The analysis focuses on 2025. I include ad valorem and duty-free lines only. Specific, compound and derived duties are excluded because they cannot be converted into directly comparable percentages without additional trade value and quantity data. This is an important limitation, especially for agricultural products, where some of the most protected products may use non-ad-valorem duties.
+
+As part of the GitHub repo, I also include sketches made during the visualization process. These sketches are meant to show the design thinking behind the final figures, not just the finished plots. The idea is to document the process from initial question to final visual output.
