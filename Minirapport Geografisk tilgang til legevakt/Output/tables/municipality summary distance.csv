@@ -1,0 +1,25 @@
+fylke,kommunenummer,kommunenavn,total_population,mean_distance_km,median_distance_km,max_distance_km,population_over_20km,population_over_40km,share_over_20km,share_over_40km
+Buskerud,3320,Flå,1123,34.8,34.5,40.9,1122,83,99.9,7.4
+Buskerud,3332,Sigdal,3567,32.2,32.7,41.3,3424,53,96,1.5
+Buskerud,3318,Krødsherad,2204,31.6,34.4,37.3,2204,0,100,0
+Buskerud,3336,Rollag,1423,30.6,31.8,38.5,1423,0,100,0
+Buskerud,3326,Hemsedal,2672,25.1,24.8,39.5,2560,0,95.8,0
+Buskerud,3316,Modum,14525,23.6,24.3,31.7,13984,0,96.3,0
+Buskerud,3334,Flesberg,2783,20,24.9,36.3,1090,0,39.2,0
+Buskerud,3322,Nesbyen,3282,18.1,18.9,29.1,458,0,14,0
+Vestfold,3903,Holmestrand,27734,15.9,17.9,26.3,4483,0,16.2,0
+Buskerud,3314,Øvre Eiker,20881,15.3,15.3,25.5,1308,0,6.3,0
+Buskerud,3310,Hole,6956,8.9,8.9,21.3,286,0,4.1,0
+Buskerud,3338,Nore og Uvdal,2464,8.5,10.6,26.5,305,0,12.4,0
+Buskerud,3312,Lier,31304,8,10.6,22.7,331,0,1.1,0
+Vestfold,3911,Færder,29054,7.3,10.4,15.7,0,0,0,0
+Buskerud,3305,Ringerike,32836,7.2,14.6,54.8,2131,498,6.5,1.5
+Vestfold,3909,Larvik,48569,5.7,9.9,33.6,2998,0,6.2,0
+Buskerud,3301,Drammen,104918,5.5,7.7,20.6,401,0,0.4,0
+Vestfold,3905,Tønsberg,57377,5,8.5,22.2,94,0,0.2,0
+Buskerud,3330,Hol,4495,4.8,9.2,23.7,36,0,0.8,0
+Vestfold,3907,Sandefjord,67767,4.5,8.7,21.7,46,0,0.1,0
+Buskerud,3303,Kongsberg,28981,4.3,10.5,28.2,1882,0,6.5,0
+Buskerud,3328,Ål,4856,4.2,7.3,18.8,0,0,0,0
+Buskerud,3324,Gol,4873,2.7,7.1,16.2,0,0,0,0
+Vestfold,3901,Horten,28025,2.5,4.5,7.7,0,0,0,0
